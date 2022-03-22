@@ -1,6 +1,6 @@
 IMAGE_PREFIX = docker.causeex.com/dart
 IMAGE_NAME = topic-provisioner
-VERSION = latest
+IMG := $(IMAGE_PREFIX)/$(IMAGE_NAME)
 
 ifndef GITHUB_REF_NAME
 	APP_VERSION := $(shell cat app.version)
