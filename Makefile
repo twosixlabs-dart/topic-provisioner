@@ -1,4 +1,4 @@
-IMAGE_PREFIX = docker.causeex.com/dart
+IMAGE_PREFIX = twosixlabsdart
 IMAGE_NAME = topic-provisioner
 IMG := $(IMAGE_PREFIX)/$(IMAGE_NAME)
 
