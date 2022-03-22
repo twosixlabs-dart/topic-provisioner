@@ -1,0 +1,31 @@
+deployment:
+  name: "dart-pipeline"
+  bootstrap_servers:
+    - "_env_"
+  topics:
+    - topic:
+        name: "dart.ingest.proxy"
+        num_partitions: 3
+        compression_type: "gzip"
+        max_message_bytes: 15000000
+        retention_ms: 5184000000
+    - topic:
+        name: "dart.generic.dlq"
+        num_partitions: 3
+        compression_type: "gzip"
+        retention_ms: 5184000000
+    - topic:
+        name: "dart.duplicate"
+        num_partitions: 3
+        compression_type: "gzip"
+        retention_ms: 5184000000
+    - topic:
+        name: "dart.cdr.streaming.updates"
+        num_partitions: 3
+        compression_type: "gzip"
+        retention_ms: 5184000000
+    - topic:
+        name: "dart.reader.notifications"
+        num_partitions: 3
+        compression_type: "gzip"
+        retention_ms: 5184000000
